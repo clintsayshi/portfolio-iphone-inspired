@@ -1,0 +1,190 @@
+@-webkit-keyframes pushInMainAttraction {
+  0% {
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes pushInMainAttraction {
+  0% {
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes pushInMainAttractionDesktop {
+  0% {
+    -webkit-transform: translate(5%, 0);
+            transform: translate(5%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes pushInMainAttractionDesktop {
+  0% {
+    -webkit-transform: translate(5%, 0);
+            transform: translate(5%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes pushOutMainAttraction {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-120vw);
+            transform: translateX(-120vw);
+  }
+}
+
+@keyframes pushOutMainAttraction {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-120vw);
+            transform: translateX(-120vw);
+  }
+}
+
+@-webkit-keyframes pushOutMainAttractionDesktop {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translate(5%, 0);
+            transform: translate(5%, 0);
+  }
+}
+
+@keyframes pushOutMainAttractionDesktop {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translate(5%, 0);
+            transform: translate(5%, 0);
+  }
+}
+
+@-webkit-keyframes pushInNavMenu {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-45vw);
+            transform: translateX(-45vw);
+  }
+}
+
+@keyframes pushInNavMenu {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-45vw);
+            transform: translateX(-45vw);
+  }
+}
+
+@-webkit-keyframes pushInNavMenuDesktop {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(-30vw);
+            transform: translateX(-30vw);
+    opacity: 1;
+  }
+}
+
+@keyframes pushInNavMenuDesktop {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(-30vw);
+            transform: translateX(-30vw);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pushOutNavMenu {
+  0% {
+    -webkit-transform: translateX(-45vw);
+            transform: translateX(-45vw);
+  }
+  50% {
+  }
+  100% {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes pushOutNavMenu {
+  0% {
+    -webkit-transform: translateX(-45vw);
+            transform: translateX(-45vw);
+  }
+  50% {
+  }
+  100% {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pushOutNavMenuDesktop {
+  0% {
+    opacity: 1;
+  }
+  50% {
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pushOutNavMenuDesktop {
+  0% {
+    opacity: 1;
+  }
+  50% {
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=animations.css.map */

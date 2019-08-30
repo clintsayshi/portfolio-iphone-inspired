@@ -1,0 +1,97 @@
+@keyframes pushInMainAttraction {
+    0% {
+        transform: translateX(-120%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pushInMainAttractionDesktop {
+    0% {
+
+        transform: translate(5%, 0)
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes pushOutMainAttraction {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-120vw);
+    }
+}
+
+@keyframes pushOutMainAttractionDesktop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translate(5%, 0);
+    }
+}
+
+@keyframes pushInNavMenu {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-45vw);
+    }
+}
+
+@keyframes pushInNavMenuDesktop {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(-30vw);
+        opacity: 1;
+    }
+}
+
+@keyframes pushOutNavMenu {
+    0% {
+        transform: translateX(-45vw);
+        //opacity: 1;
+    }
+
+    50% {
+        //opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+}
+
+@keyframes pushOutNavMenuDesktop {
+    0% {
+        //transform: translateX(60%, -120%);
+        opacity: 1;
+    }
+
+    50% {
+        //opacity: .5;
+    }
+
+    100% {
+        //transform: translate(100%, -120%);
+        opacity: 0;
+    }
+}

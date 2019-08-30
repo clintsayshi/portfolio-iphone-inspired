@@ -1,0 +1,507 @@
+@import './animations.scss';
+@import './partials/projects';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/mobile-bg-optimized.jpg);
+        background-size: cover;
+        background-position: center;
+        filter: blur(.5px) saturate(.5px);
+        //filter: saturate(1);
+
+        @media screen and (min-width:768px) {
+            background-image: url(../images/desktop-bg-optimized.jpg);
+            //width: 70%;
+        }
+    }
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    overflow-x: hidden;
+    overflow: hidden;
+
+
+
+    @media screen and (min-width:600px) and (max-width:850px) {
+        width: 80%;
+    }
+
+    @media screen and (min-width:850px) {
+        width: 70%;
+    }
+}
+
+// The Header, logo and menu
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: fixed;
+    width: 90%;
+    background: none;
+    z-index: 88;
+    //border: 1px dotted blue;
+
+    .brand-logo {
+        opacity: 0;
+    }
+
+    @media screen and (min-width:600px) and (max-width:875px) {
+        width: 85%;
+    }
+
+    @media screen and (min-width:875px) and (max-width:1200px) {
+        width: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: auto;
+
+        .nav-menu {
+            //top: 10em;
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 60%;
+    }
+}
+
+.brand-logo,
+.main-menu {
+    font-family: 'Color Dot';
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.main-menu {
+    position: relative;
+    line-height: 0.8em;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    z-index: 98;
+    color: #fff;
+
+    @media screen and (min-width:768px) {
+        //display: none;
+    }
+}
+
+// Nav Menu
+.nav-menu {
+    position: absolute;
+    left: 50vw;
+    top: 6em;
+    width: max-content;
+    animation-name: pushOutNavMenu;
+    animation-duration: 700ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transition: transform 700ms ease-in-out;
+
+    ul {
+        list-style: none;
+
+        li {
+            margin: 2em 0;
+        }
+
+        li a {
+            text-decoration: none;
+            position: relative;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        li a:hover+a::after {
+            background-color: #fff;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        /* animation: none;
+        position: static;
+        width: 50%;
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+
+            li a {
+                font-size: 1rem;
+                font-weight: normal;
+            }
+        } */
+
+    }
+}
+
+// Animate in the NavBar
+.active {
+    animation-name: pushInNavMenu;
+    animation-duration: 700ms;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards;
+
+    @media screen and (min-width:768px) {
+        animation-name: pushInNavMenuDesktop;
+        animation-duration: 700ms;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-fill-mode: forwards;
+    }
+}
+
+// Main Attraction
+.hero {
+    margin: auto;
+    margin-top: 6em;
+    width: 80%;
+    height: 85vh;
+    color: #fff;
+    // Animations & Transitions
+    animation-name: pushInMainAttraction;
+    animation-duration: 700ms;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards;
+    transition: opacity 600ms ease-in-out;
+
+    @media screen and (min-width:768px) {
+        width: 50%;
+        animation-name: pushInMainAttractionDesktop;
+        animation-duration: 600ms;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-fill-mode: forwards;
+    }
+}
+
+.hero-caption,
+.hero-text,
+.small-caption {
+    font-weight: 500;
+
+}
+
+.hero-text {
+    font-size: calc(2em + 2em);
+    /* text-align: center; */
+
+    @media screen and (min-width:768px) {
+        font-size: calc(4em + 4em);
+    }
+}
+
+.small-caption {
+    font-size: 1.1222rem;
+    font-weight: 350;
+
+    .display-html {
+        display: inline;
+        font-weight: normal;
+        opacity: .5;
+        font-style: italic;
+        font-family: monospace;
+    }
+}
+
+.recent-work {
+    background-color: #fff;
+    color: #000;
+    padding: .75em;
+    margin-top: 1.5em;
+    border-radius: 10px;
+
+    small {
+        font-size: 0.75em;
+    }
+
+    .recent-work-title {
+        margin: .4em 0;
+        font-size: 1.2em;
+        font-weight: 530;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    @media screen and (min-width:600px) and (max-width:875px) {
+        width: 85%;
+    }
+
+    @media screen and (min-width:875px) and (max-width:1200px) {
+        width: 80%;
+
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 75%;
+    }
+
+}
+
+.scroll-down {
+    text-align: center;
+    margin: 6em auto;
+
+    a {
+        text-decoration: none;
+        color: floralwhite;
+        font-weight: 500;
+    }
+
+    @media screen and (min-width: 600px) {
+        display: none;
+    }
+}
+
+.off {
+    animation-name: pushOutMainAttraction;
+    animation-duration: 600ms;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards;
+
+    @media screen and (min-width:768px) {
+        //perspective: 1000px;
+        margin-left: 1em;
+        animation-name: pushOutMainAttractionDesktop;
+        animation-duration: 500ms;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-fill-mode: forwards;
+        transition: transform 400ms ease-in-out;
+
+        .main-attraction-text {
+
+            @media screen and (min-width:768px) {
+                font-size: calc(4em + 2em);
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+/* 
+    Links
+*/
+.links {
+    text-decoration: none;
+    color: rgb(22, 3, 75);
+}
+
+/* 
+    Sections: About Me, Skills, Projects & Contact
+*/
+.section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: opacity 600ms ease-in-out;
+
+    @media screen and (min-width:768px) {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+.hide-sections {
+    opacity: 0;
+    transition: opacity 600ms ease-in-out;
+}
+
+.content-heading {
+    font-size: 1.5em;
+    color: #fff;
+    background-blend-mode: color-burn;
+    padding: 0.5em;
+    margin: .5em 0 1em;
+    position: sticky;
+    height: 2em;
+    width: 100%;
+}
+
+// contents of the section.
+.content {
+    grid: 1fr 1fr;
+
+    figure {
+        //margin: 2em auto;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+}
+
+@supports(display: grid) {
+    .content {
+        @media (min-width: 500px) {
+            display: grid;
+
+            .aboutme-content & {
+                grid: "myIntro myIntro myIntro"
+                    "picture picture someText"/ 1fr 1fr 1fr 1fr 1fr 1fr;
+            }
+        }
+    }
+}
+
+.content-box {
+    width: 90%;
+    margin: 1em auto;
+    background: #fff;
+    padding: 20px;
+    font-weight: 500;
+    color: #000;
+    font-family: arial;
+    position: relative;
+    border-radius: 0.7em;
+    //border: 1px dotted blue;
+
+    @media screen and (min-width:768px) {
+        //width: 50%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        margin-top: .5em;
+    }
+}
+
+.content-photos {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 30.33%;
+        display: block;
+    }
+}
+
+
+
+// 
+.contact-inputs {
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto;
+
+    label {
+        text-transform: uppercase;
+        font-weight: 550;
+        color: #fff;
+    }
+}
+
+input {
+    margin: 0;
+    font-size: 16px;
+    background-color: whitesmoke;
+    border: 2px solid rgb(59, 58, 58);
+    outline: none;
+    //color: white;
+    padding: 5px;
+    //border: 1px dotted blue;
+}
+
+input::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+textarea {
+    border: 1px dotted blue;
+    outline: none;
+    background-color: whitesmoke;
+    border: 2px solid rgb(59, 58, 58);
+    padding: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+textarea::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.contact-button {
+    padding: 0;
+    margin: 1em auto;
+    width: max-content;
+    background-color: #bf0096;
+
+    button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+}
+
+// footer
+footer {
+    margin: 4em auto 1em;
+    color: white;
+
+    //width: 100vw;
+    //background-color: #fff;
+
+    @media screen and (min-width:768px) {
+        width: 40%;
+    }
+
+    @media screen {
+        width: 70%;
+    }
+
+    //height: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    a img,
+    a svg {
+        width: 2em;
+        height: 2em;
+        color: white;
+        margin: 0;
+        padding: 0;
+        //background-color: #fff;
+    }
+}
